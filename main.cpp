@@ -6,32 +6,24 @@
  */
 
 #include <iostream>
-#include <string>
 
 #include "graph.hpp"
 
 int main() {
-  strukdat::graph<int> g;
+  strukdat::graph<char> g;
 
-  g.add_edge(1, 2);
-  g.add_edge(1, 4);
-  g.add_edge(2, 3);
-  g.add_edge(2, 5);
-  g.add_edge(3, 4);
-  g.add_edge(3, 5);
+  g.add_vertex('a');
+  g.add_vertex('b');
+  g.add_vertex('c');
+  g.add_vertex('d');
+  g.add_vertex('e');
 
-  g.dfs(1, [](int a) {
-    if (a == 2) a = 1;
-    std::cout << a << ' ';
-  });
+  g.add_edge('a', 'b');
+  g.add_edge('a', 'c');
+  g.add_edge('b', 'd');
+  g.add_edge('c', 'e');
 
-  std::cout << '\n';
-
-  g.dfs(1, [](int a) { std::cout << a << ' '; });
-
-  std::cout << '\n';
-
-  g.bfs(1, [](int a) { std::cout << a << ' '; });
+  g.bfs('a', [](char a) { std::cout << a << ' '; });
 
   return 0;
 }
