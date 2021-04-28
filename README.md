@@ -41,7 +41,7 @@ Referensi:
 Praktikan hanya bisa mengubah file-file berikut:
 * `main.cpp`
 * `README.md`
-* `list.hpp`
+* `graph.hpp`
 
 > Isi `main.cpp` tidak akan diperhatikan oleh penilaian atau asisten. Jadi boleh digunakan sebagai
 > tempat untuk testing atau debugging pribadi praktikan.
