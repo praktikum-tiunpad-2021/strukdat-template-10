@@ -1,7 +1,7 @@
 > **TODO: UBAH "NAMA" DAN "NPM" MENJADI NAMA DAN NPM KALIAN PADA KEMUDIAN HAPUS BARIS INI!**
-# Tugas Praktikum Struktur Data 05
+# Tugas Praktikum Struktur Data 10
 
-> Materi: Linked List 2  
+> Materi: Graph  
 > Pengajar: Asisten Praktikum 2021
 ## NAMA - NPM
 
@@ -12,16 +12,20 @@
 
 ## Deskripsi Tugas
 
-Tugas ini berisi latihan-latihan dalam mengimplementasikan circular linked list dengan sentinel node
-menggunakan _template_ pada bahasa pemrograman C++.
+Implementasi graph menggunakan adjacency list dan Object Oriented Programming pada C++11.
 
-![](img/circular_dll.png)
+Referensi:
+* https://www.cplusplus.com/reference/stl/
+* https://www.cplusplus.com/doc/tutorial/classes/
+* https://www.cplusplus.com/doc/tutorial/templates/
+* https://kodedasar.com/class-cpp/
+* https://structilmy.com/2020/08/tutorial-struktur-data-map-pada-c/
 
 
 ## Tugas
 
 * Isi nama dan NPM pada file `README.md`
-* Baca dokumentasi pada file-file `list.hpp` kemudian implementasikan pada file tersebut.
+* Baca dokumentasi pada file-file `graph.hpp` kemudian implementasikan pada file tersebut.
 * Implementasikan kode sampai semua test berhasil/_passing_.
   * Contoh jika ada test yang gagal:  
     ![](img/contoh_gagal.png)
