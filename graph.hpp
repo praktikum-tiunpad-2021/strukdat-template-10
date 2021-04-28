@@ -1,8 +1,6 @@
 #pragma once
 
 #include <functional>
-#include <queue>
-#include <stack>
 #include <unordered_map>
 #include <unordered_set>
 
@@ -32,6 +30,11 @@ class graph {
   using adj_list_type = std::unordered_map<VertexType, list_type>;
 
  public:
+  /**
+   * @brief Default constructor.
+   *
+   * @constructor
+   */
   graph() {}
 
   /**
@@ -46,11 +49,7 @@ class graph {
   }
 
   void remove_vertex(const VertexType &val) {
-    auto neighbours = _adj_list[val];
-    for (const auto &n : neighbours) {
-      remove_edge(val, n);
-    }
-    _adj_list.erase(val);
+    // TODO: Implementasikan!
   }
 
   /**
@@ -60,8 +59,7 @@ class graph {
    * @param val2 nilai vertex 2
    */
   void add_edge(const VertexType &val1, const VertexType val2) {
-    _adj_list[val1].insert(val2);
-    _adj_list[val2].insert(val1);
+    // TODO: Implementasikan!
   }
 
   /**
@@ -70,19 +68,20 @@ class graph {
    * @param val nilai dari vertex yang akan dihapus
    */
   void remove_edge(const VertexType &val1, const VertexType &val2) {
-    _adj_list[val1].erase(val2);
-    _adj_list[val2].erase(val1);
+    // TODO: Implementasikan!
   }
 
   /**
    * @brief Mengembalikan ordo dari graph.
    *
    * @note
-   * Ordo dari graph adalah jumlah node pada graph
+   * Ordo graph adalah jumlah node pada graph
    *
    * @return jumlah node pada graph
    */
-  size_t order() const { return _adj_list.size(); }
+  size_t order() const {
+    // TODO: Implementasikan!
+  }
 
   /**
    * @brief Cek apakah 2 vertex bertetangga satu sama lain.
@@ -93,8 +92,7 @@ class graph {
    * @return vertex-vertex saling bertetangga
    */
   bool is_edge(const VertexType &val1, const VertexType &val2) const {
-    const auto &neighbours = _adj_list.at(val1);
-    return neighbours.find(val2) != neighbours.end();
+    // TODO: Implementasikan!
   }
 
   /**
@@ -105,25 +103,7 @@ class graph {
    */
   void bfs(const VertexType &root,
            std::function<void(const VertexType &)> func) const {
-    VertexType current = root;
-    std::unordered_map<VertexType, bool> visited;
-    std::queue<VertexType> q;
-
-    q.push(current);
-    visited[current] = true;
-
-    while (!q.empty()) {
-      current = q.front();
-      q.pop();
-      func(current);
-
-      for (const auto &adj : _adj_list.at(current)) {
-        if (!visited[adj]) {
-          visited[adj] = true;
-          q.push(adj);
-        }
-      }
-    }
+    // TODO: Implementasikan!
   }
 
   /**
@@ -134,23 +114,7 @@ class graph {
    */
   void dfs(const VertexType &root,
            std::function<void(const VertexType &)> func) const {
-    VertexType current = root;
-    std::unordered_map<VertexType, bool> visited;
-    std::stack<VertexType> s;
-
-    s.push(current);
-
-    while (!s.empty()) {
-      current = s.top();
-      s.pop();
-      if (!visited[current]) {
-        func(current);
-        visited[current] = true;
-        for (const auto &adj : _adj_list.at(current)) {
-          s.push(adj);
-        }
-      }
-    }
+    // TODO: Implementasikan!
   }
 
  private:
