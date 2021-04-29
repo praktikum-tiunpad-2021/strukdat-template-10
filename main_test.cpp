@@ -39,7 +39,7 @@ TEST_CASE("dapat menambah dan menghapus edge", "[case_2]") {
 }
 
 TEST_CASE("dapat melakukan bfs traversal", "[case_3]") {
-  strukdat::graph<int> g;
+  strukdat::graph<char> g;
 
   g.add_vertex('a');
   g.add_vertex('b');
@@ -62,7 +62,7 @@ TEST_CASE("dapat melakukan bfs traversal", "[case_3]") {
 }
 
 TEST_CASE("dapat melakukan dfs traversal", "[case_4]") {
-  strukdat::graph<int> g;
+  strukdat::graph<char> g;
 
   g.add_vertex('a');
   g.add_vertex('b');
